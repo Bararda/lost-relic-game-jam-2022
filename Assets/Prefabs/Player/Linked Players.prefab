@@ -33,7 +33,7 @@ RectTransform:
   m_Children:
   - {fileID: 8680356294488214918}
   m_Father: {fileID: 500775814767294080}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -131,41 +131,9 @@ Transform:
   m_Children:
   - {fileID: 7480605762566658192}
   - {fileID: 8709570140802452215}
-  - {fileID: 8488448144429613132}
   - {fileID: 7346922671764644382}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4684050604562584913
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8488448144429613132}
-  m_Layer: 0
-  m_Name: Player Aspect Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8488448144429613132
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4684050604562584913}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 500775814767294080}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2310915777473138764
 PrefabInstance:
@@ -252,9 +220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01a6203f056d3e488f8235ee0b0ea96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 1249546849911287943}
   aspect: {fileID: 3409179510734307095}
   isInverted: 1
+  movement: {fileID: 1249546849911287943}
 --- !u!4 &8709570140802452215 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6398663177743162043, guid: 15e368f97f41201418146155676c9fb9, type: 3}
@@ -350,9 +318,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01a6203f056d3e488f8235ee0b0ea96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 1034034156055306976}
   aspect: {fileID: 3409179510734307095}
   isInverted: 0
+  movement: {fileID: 1034034156055306976}
 --- !u!1001 &8533806436945272551
 PrefabInstance:
   m_ObjectHideFlags: 0
