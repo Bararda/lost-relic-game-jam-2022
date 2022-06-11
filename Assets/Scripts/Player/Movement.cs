@@ -19,12 +19,13 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             rigidbody2d.AddForce(-transform.right * speed, ForceMode2D.Force);
+            rigidbody2d.velocity = Vector2.ClampMagnitude(rigidbody2d.velocity, maxSpeed);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             rigidbody2d.AddForce(transform.right * speed, ForceMode2D.Force);
+            rigidbody2d.velocity = Vector2.ClampMagnitude(rigidbody2d.velocity, maxSpeed);
         }
-        rigidbody2d.velocity = Vector2.ClampMagnitude(rigidbody2d.velocity, maxSpeed);
 
     }
 }
