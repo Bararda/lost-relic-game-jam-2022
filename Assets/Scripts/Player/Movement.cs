@@ -5,16 +5,26 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public Rigidbody2D rigidbody2d;
-    public float speed = 100f;
+    public float speed = 1f;
+    public float maxSpeed = 50f;
 
-    void Update()
+    void FixedUpdate()
     {
         HandleMovement();
     }
 
     void HandleMovement()
     {
-        float movementHorizontal = Input.GetAxis("Horizontal") * speed * Time.fixedDeltaTime;
-        rigidbody2d.velocity = new Vector2(movementHorizontal, 0);
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            rigidbody2d.AddForce(-transform.right * speed, ForceMode2D.Force);
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            rigidbody2d.AddForce(transform.right * speed, ForceMode2D.Force);
+        }
+        rigidbody2d.velocity = Vector2.ClampMagnitude(rigidbody2d.velocity, maxSpeed);
+
     }
 }
