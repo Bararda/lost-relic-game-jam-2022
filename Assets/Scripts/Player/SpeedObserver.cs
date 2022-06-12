@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class SpeedObserver : AspectObserver
+namespace Player
 {
-    public Movement movement;
-    public override void OnNotify()
+    public class SpeedObserver : AspectObserver
     {
-        movement.maxSpeed = GetAspectValue() * 10;
+        public Movement movement;
+        public override void OnNotify()
+        {
+            movement.maxSpeed = GetAspectValue() * 10;
+        }
     }
 }
