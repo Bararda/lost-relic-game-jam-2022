@@ -1,30 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
+using Abstract;
 using UnityEngine;
 
-public class AspectObserver : MonoBehaviour, IObserver
+namespace Player
 {
-    public Aspect aspect;
-    public bool isInverted = false;
+    public class AspectObserver : MonoBehaviour, IObserver
+    {
+        public Aspect aspect;
+        public bool isInverted = false;
 
-    void Start()
-    {
-        aspect.Attach(this);
-    }
-    public virtual void OnNotify()
-    {
-        Debug.Log("Aspect On Notify Not Implemented");
-    }
-
-    public float GetAspectValue()
-    {
-        if (isInverted)
+        void Start()
         {
-            return (float)((aspect.maxValue - aspect.value));
+            aspect.Attach(this);
         }
-        else
+        public virtual void OnNotify()
         {
-            return (float)(aspect.value);
+            Debug.Log("Aspect On Notify Not Implemented");
+        }
+
+        public float GetAspectValue()
+        {
+            if (isInverted)
+            {
+                return (float)((aspect.maxValue - aspect.value));
+            }
+            else
+            {
+                return (float)(aspect.value);
+            }
         }
     }
 }

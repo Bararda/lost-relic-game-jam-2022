@@ -1,26 +1,28 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Subject : MonoBehaviour
+namespace Abstract
 {
-    private List<IObserver> observers = new List<IObserver>();
-
-    public void Attach(IObserver observer)
+    public class Subject : MonoBehaviour
     {
-        observers.Add(observer);
-    }
+        private List<IObserver> observers = new List<IObserver>();
 
-    public void Detach(IObserver observer)
-    {
-        observers.Remove(observer);
-    }
-
-    public void NotifyObservers()
-    {
-        foreach (IObserver observer in observers)
+        public void Attach(IObserver observer)
         {
-            observer.OnNotify();
+            observers.Add(observer);
+        }
+
+        public void Detach(IObserver observer)
+        {
+            observers.Remove(observer);
+        }
+
+        public void NotifyObservers()
+        {
+            foreach (IObserver observer in observers)
+            {
+                observer.OnNotify();
+            }
         }
     }
 }

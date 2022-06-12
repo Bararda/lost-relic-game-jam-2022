@@ -1,32 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+namespace Player
 {
-    public Rigidbody2D rigidbody2d;
-    public float speed = 100f;
-    public float maxSpeed = 50f;
-
-    void FixedUpdate()
+    public class Movement : MonoBehaviour
     {
-        HandleMovement();
-    }
+        public Rigidbody2D rigidbody2d;
+        public float speed = 100f;
+        public float maxSpeed = 50f;
 
-    void HandleMovement()
-    {
-
-        if (Input.GetKey(KeyCode.A))
+        private void FixedUpdate()
         {
-            // multiply be mass so that the movement is not affected by the mass of the object
-            rigidbody2d.AddForce(-transform.right * speed * rigidbody2d.mass, ForceMode2D.Force);
-            rigidbody2d.velocity = Vector2.ClampMagnitude(rigidbody2d.velocity, maxSpeed);
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            rigidbody2d.AddForce(transform.right * speed * rigidbody2d.mass, ForceMode2D.Force);
-            rigidbody2d.velocity = Vector2.ClampMagnitude(rigidbody2d.velocity, maxSpeed);
+            HandleMovement();
         }
 
+        private void HandleMovement()
+        {
+            if (Input.GetKey(KeyCode.A))
+            {
+                // multiply be mass so that the movement is not affected by the mass of the object
+                rigidbody2d.AddForce(-transform.right * (speed * rigidbody2d.mass), ForceMode2D.Force);
+                rigidbody2d.velocity = new Vector2(Mathf.Clamp(rigidbody2d.velocity.x, -maxSpeed, 0f), rigidbody2d.velocity.y);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                rigidbody2d.AddForce(transform.right * (speed * rigidbody2d.mass), ForceMode2D.Force);
+                rigidbody2d.velocity = new Vector2(Mathf.Clamp(rigidbody2d.velocity.x, 0f, maxSpeed), rigidbody2d.velocity.y);
+            }
+
+        }
     }
 }

@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public interface IObserver
+namespace Abstract
 {
-    void OnNotify();
+    public interface IObserver
+    {
+        void OnNotify();
+    }
 }
