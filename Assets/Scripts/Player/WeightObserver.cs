@@ -8,7 +8,6 @@ public class WeightObserver : AspectObserver
 
     public override void OnNotify()
     {
-        Debug.Log(GetAspectValue());
         rb2d.mass = GetAspectValue();
     }
 }

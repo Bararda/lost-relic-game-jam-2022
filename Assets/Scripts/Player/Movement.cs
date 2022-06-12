@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
+            // multiply be mass so that the movement is not affected by the mass of the object
             rigidbody2d.AddForce(-transform.right * speed * rigidbody2d.mass, ForceMode2D.Force);
             rigidbody2d.velocity = Vector2.ClampMagnitude(rigidbody2d.velocity, maxSpeed);
         }
