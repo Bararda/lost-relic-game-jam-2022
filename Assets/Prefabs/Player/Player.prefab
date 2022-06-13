@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5638710673603260200}
   - component: {fileID: 4362309147768500070}
   - component: {fileID: -5673042828812721973}
+  - component: {fileID: -1253412796394953452}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -149,3 +150,14 @@ MonoBehaviour:
   rigidbody2d: {fileID: 5638710673603260200}
   speed: 500
   maxSpeed: 5
+--- !u!247 &-1253412796394953452
+ConstantForce2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6398663177743162045}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 0}
+  m_RelativeForce: {x: 0, y: 0}
+  m_Torque: 0
