@@ -13,7 +13,10 @@ namespace Interactables
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            _playerRigidBody = col.GetComponent<Rigidbody2D>();
+            if (col.CompareTag("Player"))
+            {
+                _playerRigidBody = col.GetComponent<Rigidbody2D>();
+            }
         }
 
         private void OnTriggerStay2D(Collider2D other)

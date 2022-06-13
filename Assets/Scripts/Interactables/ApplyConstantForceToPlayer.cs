@@ -13,7 +13,10 @@ namespace Interactables
         
         private void OnTriggerEnter2D(Collider2D col)
         {
-            _playerConstantForce = col.GetComponent<ConstantForce2D>();
+            if (col.CompareTag("Player"))
+            {
+                _playerConstantForce = col.GetComponent<ConstantForce2D>();
+            }
         }
         
         private void OnTriggerStay2D(Collider2D other)
@@ -36,6 +39,14 @@ namespace Interactables
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                _playerConstantForce.force = new Vector2(0, 0);
             }
         }
     }
