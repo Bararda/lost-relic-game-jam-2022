@@ -16,7 +16,7 @@ namespace Player
         {
             int sliderValue = (int)(value * 10);
             topText.text = sliderValue.ToString();
-            bottomText.text = (10 - sliderValue).ToString();
+            bottomText.text = (maxValue - sliderValue).ToString();
             this.value = sliderValue;
             NotifyObservers();
         }
