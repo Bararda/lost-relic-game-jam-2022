@@ -8,7 +8,7 @@ namespace Player
 
         public override void OnNotify()
         {
-            rb2d.mass = GetAspectValue();
+            rb2d.mass = (GetAspectValue() * 1 / 4f) + 1;
         }
     }
 }
