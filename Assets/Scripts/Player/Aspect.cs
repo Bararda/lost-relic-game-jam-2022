@@ -1,7 +1,6 @@
 using Abstract;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine;
 
 namespace Player
 {
@@ -15,7 +14,6 @@ namespace Player
 
         public void SetSliderValue(float value)
         {
-
             float sliderValue = (value * 10);
             topText.text = sliderValue.ToString();
             bottomText.text = (maxValue - sliderValue).ToString();

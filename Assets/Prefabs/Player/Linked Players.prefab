@@ -215,6 +215,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6398663177743162045, guid: 15e368f97f41201418146155676c9fb9, type: 3}
   m_PrefabInstance: {fileID: 2310915777473138764}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &196778052185468154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8709570140802452209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f62e39d9d4258438336b0875ff0a69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aspect: {fileID: 4073986807399284225}
+  isInverted: 1
+  hitpoints: 5
+  damageTaken: 0
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3494822128237817343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,25 +264,6 @@ MonoBehaviour:
   aspect: {fileID: 3409179510734307095}
   isInverted: 1
   movement: {fileID: 1249546849911287943}
---- !u!114 &196778052185468154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8709570140802452209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30f62e39d9d4258438336b0875ff0a69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aspect: {fileID: 4073986807399284225}
-  isInverted: 1
-  hitpoints: 5
-  damageTaken: 0
-  onDeath:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &8709570140802452215 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6398663177743162043, guid: 15e368f97f41201418146155676c9fb9, type: 3}
@@ -347,6 +347,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6398663177743162045, guid: 15e368f97f41201418146155676c9fb9, type: 3}
   m_PrefabInstance: {fileID: 4547770362423034411}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &366072693121440077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480605762566658198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f62e39d9d4258438336b0875ff0a69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aspect: {fileID: 4073986807399284225}
+  isInverted: 0
+  hitpoints: 5
+  damageTaken: 0
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5078388218639466532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,25 +396,6 @@ MonoBehaviour:
   aspect: {fileID: 3409179510734307095}
   isInverted: 0
   movement: {fileID: 1034034156055306976}
---- !u!114 &366072693121440077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7480605762566658198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30f62e39d9d4258438336b0875ff0a69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aspect: {fileID: 4073986807399284225}
-  isInverted: 0
-  hitpoints: 5
-  damageTaken: 0
-  onDeath:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!50 &8168496695010995459 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5638710673603260200, guid: 15e368f97f41201418146155676c9fb9, type: 3}
@@ -498,9 +498,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3360752617985158113, guid: 8e9665c57f248994b83d7de822a84651, type: 3}
+      propertyPath: m_NumberOfSteps
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5994690980312315686, guid: 8e9665c57f248994b83d7de822a84651, type: 3}
       propertyPath: m_Name
       value: Health Slider
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422692781668114928, guid: 8e9665c57f248994b83d7de822a84651, type: 3}
+      propertyPath: minValue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8503415602424047627, guid: 8e9665c57f248994b83d7de822a84651, type: 3}
       propertyPath: m_AnchorMax.x

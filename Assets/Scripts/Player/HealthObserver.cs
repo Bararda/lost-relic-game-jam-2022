@@ -24,6 +24,7 @@ namespace Player
         {
             if (hitpoints - damageTaken <= 0)
             {
+                Debug.Log("Player died");
                 onDeath.Invoke();
             }
         }
