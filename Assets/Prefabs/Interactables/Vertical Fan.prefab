@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 7951842418978444381}
   - component: {fileID: 7951842418978444380}
   m_Layer: 0
-  m_Name: Fan
+  m_Name: Vertical Fan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
