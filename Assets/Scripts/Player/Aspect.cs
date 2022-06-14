@@ -22,6 +22,7 @@ namespace Player
 
         public void ChangeAspect(int amount)
         {
+            Debug.Log("ChangeAspect" + amount + " " + value);
             value += amount;
             if (value < 0)
             {
