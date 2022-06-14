@@ -222,6 +222,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6151b7e46f14e4198c5d2c9ea747f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4022595542885439978 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1711689957575248294, guid: 15e368f97f41201418146155676c9fb9, type: 3}
+  m_PrefabInstance: {fileID: 2310915777473138764}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8709570140802452209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cffed16b75745e43b3b592b1073d509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &7949623947043192676 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5638710673603260200, guid: 15e368f97f41201418146155676c9fb9, type: 3}
@@ -250,7 +261,19 @@ MonoBehaviour:
   damageTaken: 0
   onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4022595542885439978}
+        m_TargetAssemblyTypeName: Player.PlayerScript, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3494822128237817343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +377,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6151b7e46f14e4198c5d2c9ea747f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2944731824710355853 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1711689957575248294, guid: 15e368f97f41201418146155676c9fb9, type: 3}
+  m_PrefabInstance: {fileID: 4547770362423034411}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480605762566658198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cffed16b75745e43b3b592b1073d509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7480605762566658192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6398663177743162043, guid: 15e368f97f41201418146155676c9fb9, type: 3}
@@ -382,7 +416,19 @@ MonoBehaviour:
   damageTaken: 0
   onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2944731824710355853}
+        m_TargetAssemblyTypeName: Player.PlayerScript, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5078388218639466532
 MonoBehaviour:
   m_ObjectHideFlags: 0
