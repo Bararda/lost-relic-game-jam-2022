@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7937698398705682623}
   - component: {fileID: 7937698398705682616}
-  - component: {fileID: 1858423845230587588}
+  - component: {fileID: 296134789813649624}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -59,7 +59,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.494579, y: 0.255682}
   m_EdgeRadius: 0
---- !u!114 &1858423845230587588
+--- !u!114 &296134789813649624
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,12 +68,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7937698398705682622}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abf3c14f0357422989ab655aa9066947, type: 3}
+  m_Script: {fileID: 11500000, guid: 84c476ac45ef85242a7f2a32c90ebfa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   externalForce: 500
-  forceDirection: 3
   ignoreMass: 1
+  forceDirection: 2
 --- !u!1 &7937698399151822243
 GameObject:
   m_ObjectHideFlags: 0
