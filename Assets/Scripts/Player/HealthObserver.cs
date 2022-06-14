@@ -8,6 +8,8 @@ namespace Player
         public int hitpoints = 5;
         public int damageTaken = 0;
         public UnityEvent onDeath;
+        private int CurrentHealth => hitpoints - damageTaken;
+
         public override void OnNotify()
         {
             hitpoints = (int)GetAspectValue();
@@ -17,12 +19,14 @@ namespace Player
         public void Hit(int damage)
         {
             damageTaken += damage;
+            Debug.Log($"Damage Taken: {damageTaken}");
+            Debug.Log($"Current Health: {CurrentHealth}");
             CheckHealth();
         }
 
-        void CheckHealth()
+        private void CheckHealth()
         {
-            if (hitpoints - damageTaken <= 0)
+            if (CurrentHealth <= 0)
             {
                 Debug.Log("Player died");
                 onDeath.Invoke();
