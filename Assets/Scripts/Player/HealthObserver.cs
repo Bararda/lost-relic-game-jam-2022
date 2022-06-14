@@ -26,10 +26,23 @@ namespace Player
 
         private void CheckHealth()
         {
+            SetHealthText();
             if (CurrentHealth <= 0)
             {
                 Debug.Log("Player died");
                 onDeath.Invoke();
+            }
+        }
+
+        private void SetHealthText()
+        {
+            if (!isInverted)
+            {
+                aspect.topText.text = (CurrentHealth).ToString();
+            }
+            else
+            {
+                aspect.bottomText.text = (CurrentHealth).ToString();
             }
         }
     }

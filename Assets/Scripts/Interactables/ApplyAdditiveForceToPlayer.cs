@@ -9,6 +9,7 @@ namespace Interactables
         private Rigidbody2D _playerRigidBody;
         public float externalForce;
         public ExternalMovePlayerDirection forceDirection;
+        public bool ignoreMass = false;
         private const ForceMode2D ForceMode = ForceMode2D.Force;
 
         private void OnTriggerEnter2D(Collider2D col)
@@ -22,20 +23,24 @@ namespace Interactables
         private void OnTriggerStay2D(Collider2D other)
         {
             if (!other.CompareTag("Player")) return;
-
+            float force = externalForce;
+            if (ignoreMass)
+            {
+                force *= _playerRigidBody.mass;
+            }
             switch (forceDirection)
             {
                 case ExternalMovePlayerDirection.Upwards:
-                    _playerRigidBody.AddForce(new Vector2(0, externalForce), ForceMode);
+                    _playerRigidBody.AddForce(new Vector2(0, force), ForceMode);
                     break;
                 case ExternalMovePlayerDirection.Left:
-                    _playerRigidBody.AddForce(new Vector2(-externalForce, 0), ForceMode);
+                    _playerRigidBody.AddForce(new Vector2(-force, 0), ForceMode);
                     break;
                 case ExternalMovePlayerDirection.Right:
-                    _playerRigidBody.AddForce(new Vector2(externalForce, 0), ForceMode);
+                    _playerRigidBody.AddForce(new Vector2(force, 0), ForceMode);
                     break;
                 case ExternalMovePlayerDirection.Downwards:
-                    _playerRigidBody.AddForce(new Vector2(0, -externalForce), ForceMode);
+                    _playerRigidBody.AddForce(new Vector2(0, -force), ForceMode);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
