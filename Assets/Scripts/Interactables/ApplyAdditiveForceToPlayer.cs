@@ -23,11 +23,9 @@ namespace Interactables
         private void OnTriggerStay2D(Collider2D other)
         {
             if (!other.CompareTag("Player")) return;
-            float force = externalForce;
-            if (ignoreMass)
-            {
-                force *= _playerRigidBody.mass;
-            }
+            
+            float force = ignoreMass ? externalForce * _playerRigidBody.mass : externalForce;
+            
             switch (forceDirection)
             {
                 case ExternalMovePlayerDirection.Upwards:
