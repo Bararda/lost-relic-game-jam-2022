@@ -1,11 +1,12 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 namespace Interactables
 {
     public class LevelGoalScript : MonoBehaviour
     {
         public LevelGoalScript linkedGoal;
         public bool isComplete = false;
+        public string levelToLoad;
         private void OnTriggerEnter2D(Collider2D col)
         {
             if (col.CompareTag("Player"))
@@ -30,6 +31,7 @@ namespace Interactables
             if (isComplete && linkedGoal.isComplete)
             {
                 Debug.Log("Both goals are complete, Completed Level");
+                SceneManager.LoadScene(levelToLoad);
             }
         }
     }
