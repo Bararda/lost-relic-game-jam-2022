@@ -56,6 +56,9 @@
      <Compile Include="Assets\Scripts\Player\HealthObserver.cs" />
      <Compile Include="Assets\Scripts\Interactables\OneTimeHitToPlayer.cs" />
      <Compile Include="Assets\Scripts\Menus\MainMenuController.cs" />
+     <Compile Include="Assets\Scripts\Interactables\PushableBlock.cs" />
+     <Compile Include="Assets\Scripts\Interactables\PushableBlockController.cs" />
+     <Compile Include="Assets\Scripts\Enums\BlockDirection.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
