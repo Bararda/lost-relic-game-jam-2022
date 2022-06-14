@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7698849814689548210}
   - component: {fileID: 8503516324390901895}
   - component: {fileID: 8499863273542817543}
+  - component: {fileID: 7839722262908353350}
   m_Layer: 5
   m_Name: Aspect Manager
   m_TagString: Untagged
@@ -103,6 +104,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7839722262908353350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656990799963215877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9f05ef13df5c540b9ee6ed5d1418f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aspects:
+  - {fileID: 4073986807399284225}
+  - {fileID: 3409179510734307095}
+  - {fileID: 4281190204191314879}
 --- !u!1 &4578667044995347596
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,15 +666,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8503415602424047627, guid: 8e9665c57f248994b83d7de822a84651, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8503415602424047627, guid: 8e9665c57f248994b83d7de822a84651, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8503415602424047627, guid: 8e9665c57f248994b83d7de822a84651, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.45000002
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9665c57f248994b83d7de822a84651, type: 3}
@@ -778,15 +795,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8503415602424047627, guid: 8e9665c57f248994b83d7de822a84651, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8503415602424047627, guid: 8e9665c57f248994b83d7de822a84651, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8503415602424047627, guid: 8e9665c57f248994b83d7de822a84651, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.45000002
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9665c57f248994b83d7de822a84651, type: 3}
