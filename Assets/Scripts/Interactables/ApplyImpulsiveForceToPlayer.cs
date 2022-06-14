@@ -14,7 +14,7 @@ namespace Interactables
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (!other.CompareTag("Player")) return;
-            
+
             _playerRigidBody = other.GetComponent<Rigidbody2D>();
 
             switch (forceDirection)

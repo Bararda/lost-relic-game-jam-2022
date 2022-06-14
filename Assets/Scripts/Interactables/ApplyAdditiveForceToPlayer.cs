@@ -22,7 +22,7 @@ namespace Interactables
         private void OnTriggerStay2D(Collider2D other)
         {
             if (!other.CompareTag("Player")) return;
-    
+
             switch (forceDirection)
             {
                 case ExternalMovePlayerDirection.Upwards:
