@@ -12,8 +12,20 @@ namespace Interactables
         {
             if (col.CompareTag("Player"))
             {
+                GetComponent<BoxCollider2D>().enabled = false;
+                GetComponent<SpriteRenderer>().enabled = false;
                 col.GetComponent<HealthObserver>().Hit(damageOnHit);
-                Destroy(gameObject);
+
+                AudioSource audioSource = GetComponent<AudioSource>();
+                if (audioSource != null)
+                {
+                    audioSource.Play();
+                    Destroy(gameObject, audioSource.clip.length);
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }
