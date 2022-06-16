@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Interactables\ApplyImpulsiveForceToPlayer.cs" />
+     <Compile Include="Assets\Scripts\Interactables\PlayAudioSourceOnPlayerEnter.cs" />
      <Compile Include="Assets\Scripts\Abstract\Subject.cs" />
      <Compile Include="Assets\Scripts\Interactables\PushableBlock.cs" />
      <Compile Include="Assets\Scripts\Interactables\ApplyConstantForceToPlayer.cs" />
