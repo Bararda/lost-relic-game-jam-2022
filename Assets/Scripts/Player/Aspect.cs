@@ -9,9 +9,15 @@ namespace Player
         public Scrollbar scrollbar;
         public TMP_Text topText;
         public TMP_Text bottomText;
-        public Image selectedImage;
         public float value = 5;
         public int maxValue = 10;
+        private Image _scrollbarImage;
+
+        private void Start()
+        {
+            _scrollbarImage = scrollbar.GetComponent<Image>();
+        }
+        
         public void SetSliderValue(float value)
         {
             float sliderValue = (value * 10);
@@ -45,7 +51,7 @@ namespace Player
 
         public void SetSelected(bool selected)
         {
-            selectedImage.enabled = selected;
+            _scrollbarImage.color = selected ? new Color(.3747f, .9811f, .0138f) : new Color(.5742f,.58f, .58f);
         }
     }
 }
