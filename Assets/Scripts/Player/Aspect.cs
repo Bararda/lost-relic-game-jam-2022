@@ -12,6 +12,8 @@ namespace Player
         public float value = 5;
         public int maxValue = 10;
         private Image _scrollbarImage;
+        public AudioSource aspectSelectAudioSource;
+        public AudioSource aspectChangeAudioSource;
 
         private void Awake()
         {
@@ -28,7 +30,6 @@ namespace Player
 
         public void ChangeAspect(int amount)
         {
-            Debug.Log("ChangeAspect" + amount + " " + value);
             value += amount;
             if (value < 0)
             {
@@ -40,6 +41,7 @@ namespace Player
             }
             scrollbar.value = value / 10;
             SetAspectText();
+            aspectChangeAudioSource.Play();
             NotifyObservers();
         }
 
@@ -51,7 +53,15 @@ namespace Player
 
         public void SetSelected(bool selected)
         {
-            _scrollbarImage.color = selected ? new Color(.2625f, .9433f, .5444f) : new Color(.5742f,.58f, .58f);
+            if (selected)
+            {
+                aspectSelectAudioSource.Play();
+                _scrollbarImage.color = new Color(.2625f, .9433f, .5444f);
+            }
+            else
+            { 
+                _scrollbarImage.color = new Color(.5742f,.58f, .58f);
+            }
         }
     }
 }
