@@ -13,11 +13,11 @@ namespace Player
         public int maxValue = 10;
         private Image _scrollbarImage;
 
-        private void Start()
+        private void Awake()
         {
             _scrollbarImage = scrollbar.GetComponent<Image>();
         }
-        
+
         public void SetSliderValue(float value)
         {
             float sliderValue = (value * 10);
