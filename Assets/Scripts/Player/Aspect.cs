@@ -51,7 +51,7 @@ namespace Player
 
         public void SetSelected(bool selected)
         {
-            _scrollbarImage.color = selected ? new Color(.3747f, .9811f, .0138f) : new Color(.5742f, .58f, .58f);
+            _scrollbarImage.color = selected ? new Color(.2625f, .9433f, .5444f) : new Color(.5742f,.58f, .58f);
         }
     }
 }
