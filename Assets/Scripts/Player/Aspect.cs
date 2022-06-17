@@ -13,11 +13,11 @@ namespace Player
         public int maxValue = 10;
         private Image _scrollbarImage;
 
-        private void Start()
+        private void Awake()
         {
             _scrollbarImage = scrollbar.GetComponent<Image>();
         }
-        
+
         public void SetSliderValue(float value)
         {
             float sliderValue = (value * 10);
@@ -51,7 +51,7 @@ namespace Player
 
         public void SetSelected(bool selected)
         {
-            _scrollbarImage.color = selected ? new Color(.3747f, .9811f, .0138f) : new Color(.5742f,.58f, .58f);
+            _scrollbarImage.color = selected ? new Color(.3747f, .9811f, .0138f) : new Color(.5742f, .58f, .58f);
         }
     }
 }
