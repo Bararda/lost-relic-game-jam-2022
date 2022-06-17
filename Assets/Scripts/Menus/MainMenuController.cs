@@ -1,12 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuController : MonoBehaviour
+namespace Menus
 {
-    public void Play()
+    public class MainMenuController : MonoBehaviour
     {
-        SceneManager.LoadScene("Demo Level");
+        public void Play()
+        {
+            SceneManager.LoadScene("Vertical Level");
+        }
+
+        public void GoToCredits()
+        {
+            SceneManager.LoadScene("Credits");
+        }
+
+        public void GoToMainMenu()
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+
+        public void LinkToBillbobphilItchPage()
+        {
+            Application.OpenURL("https://billbobphil.itch.io/");
+        }
+        
+        public void LinkToBarardaItchPage()
+        {
+            Application.OpenURL("https://bararda.itch.io/");
+        }
     }
 }
