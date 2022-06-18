@@ -45,6 +45,14 @@ namespace Player
             NotifyObservers();
         }
 
+        public void SetAspectValue(float value)
+        {
+            this.value = value;
+            scrollbar.value = value / 10;
+            SetAspectText();
+            NotifyObservers();
+        }
+
         public void SetAspectText()
         {
             topText.text = value.ToString();
@@ -59,8 +67,8 @@ namespace Player
                 _scrollbarImage.color = new Color(.2625f, .9433f, .5444f);
             }
             else
-            { 
-                _scrollbarImage.color = new Color(.5742f,.58f, .58f);
+            {
+                _scrollbarImage.color = new Color(.5742f, .58f, .58f);
             }
         }
     }

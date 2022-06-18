@@ -12,8 +12,25 @@ namespace Player
 
         public override void OnNotify()
         {
+            int currentHitpoints = hitpoints;
             hitpoints = (int)GetAspectValue();
+            EnforceAspectMinimum(currentHitpoints);
             CheckHealth();
+        }
+
+        void EnforceAspectMinimum(int currentHitpoints)
+        {
+            if (CurrentHealth <= 0)
+            {
+                if (isInverted)
+                {
+                    aspect.SetAspectValue(aspect.maxValue - currentHitpoints);
+                }
+                else
+                {
+                    aspect.SetAspectValue(currentHitpoints);
+                }
+            }
         }
 
         public void Hit(int damage)
