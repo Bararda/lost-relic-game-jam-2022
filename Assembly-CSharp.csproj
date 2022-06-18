@@ -63,6 +63,8 @@
      <Compile Include="Assets\Scripts\Enums\BlockDirection.cs" />
      <Compile Include="Assets\Scripts\Player\AspectManager.cs" />
      <Compile Include="Assets\Scripts\Player\AspectObserver.cs" />
+     <Compile Include="Assets\Scripts\Tutorials\BasicTutorialScript.cs" />
+     <Compile Include="Assets\Scripts\Tutorials\AspectTutorialScript.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
