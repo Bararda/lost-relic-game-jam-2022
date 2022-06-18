@@ -7,7 +7,7 @@ namespace Menus
     {
         public void Play()
         {
-            SceneManager.LoadScene("Vertical Level");
+            SceneManager.LoadScene("0_TutorialBasics");
         }
 
         public void GoToCredits()
