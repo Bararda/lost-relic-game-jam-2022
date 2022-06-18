@@ -27,11 +27,11 @@ namespace Player
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                selectedAspect.ChangeAspect(-1);
+                selectedAspect.ChangeAspect(1);
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                selectedAspect.ChangeAspect(1);
+                selectedAspect.ChangeAspect(-1);
             }
             else if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
