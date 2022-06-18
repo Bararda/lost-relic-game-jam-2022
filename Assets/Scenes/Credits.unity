@@ -1775,7 +1775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6741936064131804849, guid: ee1421c53a839ff408d04af7c7dad7dd, type: 3}
       propertyPath: m_AllowDynamicResolution
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6741936064131804851, guid: ee1421c53a839ff408d04af7c7dad7dd, type: 3}
       propertyPath: m_Name
