@@ -8,7 +8,7 @@ namespace Player
         public List<Aspect> aspects;
         private Aspect selectedAspect;
 
-        void Start()
+        private void Start()
         {
             for (int i = 0; i < aspects.Count; i++)
             {
@@ -17,32 +17,33 @@ namespace Player
             selectedAspect = aspects[0];
             selectedAspect.SetSelected(true);
         }
-        void Update()
+
+        private void Update()
         {
             HandleKeyPress();
         }
 
-        void HandleKeyPress()
+        private void HandleKeyPress()
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 selectedAspect.ChangeAspect(-1);
             }
-            else if (Input.GetKeyDown(KeyCode.S))
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 selectedAspect.ChangeAspect(1);
             }
-            else if (Input.GetKeyDown(KeyCode.Q))
+            else if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 GetNextAspect(-1);
             }
-            else if (Input.GetKeyDown(KeyCode.E))
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 GetNextAspect(1);
             }
         }
 
-        void GetNextAspect(int amount)
+        private void GetNextAspect(int amount)
         {
             selectedAspect.SetSelected(false);
             int index = aspects.IndexOf(selectedAspect);

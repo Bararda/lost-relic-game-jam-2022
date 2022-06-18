@@ -5,8 +5,8 @@ namespace Tutorials
 {
     public class AspectTutorialScript : MonoBehaviour
     {
-        public TextMeshProUGUI howToStatsText;
-        public TextMeshProUGUI statReprecussionText;
+        public GameObject howToStatsText;
+        public GameObject statReprecussionText;
         private AspectTutorialStage _currentStage;
     
         private enum AspectTutorialStage
@@ -19,7 +19,7 @@ namespace Tutorials
         private void Start()
         {
             _currentStage = AspectTutorialStage.HowTo;
-            statReprecussionText.enabled = false;
+            statReprecussionText.SetActive(false);
         }
 
         private void Update()
@@ -35,12 +35,12 @@ namespace Tutorials
                 switch (_currentStage)
                 {
                     case AspectTutorialStage.HowTo:
-                        howToStatsText.enabled = false;
-                        statReprecussionText.enabled = true;
+                        howToStatsText.SetActive(false);
+                        statReprecussionText.SetActive(true);
                         _currentStage = AspectTutorialStage.Reprecussions;
                         break;
                     case AspectTutorialStage.Reprecussions:
-                        statReprecussionText.enabled = false;
+                        statReprecussionText.SetActive(false);
                         _currentStage = AspectTutorialStage.Finish;
                         break;
                 }
