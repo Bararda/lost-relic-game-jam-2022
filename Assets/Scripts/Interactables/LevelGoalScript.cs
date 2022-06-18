@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Player;
 namespace Interactables
 {
     public class LevelGoalScript : MonoBehaviour
@@ -7,11 +8,23 @@ namespace Interactables
         public LevelGoalScript linkedGoal;
         public bool isComplete = false;
         public string levelToLoad;
+
+        public GameObject levelEndScreen;
+
+        void Update()
+        {
+            if (levelEndScreen.activeSelf)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    SceneManager.LoadScene(levelToLoad);
+                }
+            }
+        }
         private void OnTriggerEnter2D(Collider2D col)
         {
             if (col.CompareTag("Player"))
             {
-                Debug.Log("Player entered the Goal");
                 isComplete = true;
                 CheckGoal();
             }
@@ -21,7 +34,6 @@ namespace Interactables
         {
             if (col.CompareTag("Player"))
             {
-                Debug.Log("Player exited the Goal");
                 isComplete = false;
             }
         }
@@ -30,8 +42,13 @@ namespace Interactables
         {
             if (isComplete && linkedGoal.isComplete)
             {
-                Debug.Log("Both goals are complete, Completed Level");
-                SceneManager.LoadScene(levelToLoad);
+                // get and deactivate the movement
+                Movement[] movementObjects = FindObjectsOfType<Movement>();
+                foreach (Movement movement in movementObjects)
+                {
+                    movement.enabled = false;
+                }
+                levelEndScreen.SetActive(true);
             }
         }
     }
